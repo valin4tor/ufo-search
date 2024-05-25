@@ -476,8 +476,7 @@ h2.yacy, p.yacy { /* The heading in index.html */
   margin:10px auto;
   text-align:center;
   padding-top:20px;
-  width:512px;
-  min-width:512px; /*min-width does not exist in IE 5.5, 6 and Safari */
+  max-width:512px;
 }
 
 div.welcome { /* The heading in Status.html */
