@@ -3,7 +3,7 @@
   <div class="container-fluid">
     <div class="collapse navbar-collapse navbar-header">
       <a class="navbar-brand" id="navbar-brand" href="./">
-        <span><img id="header-greeting-icon" class="yacylogo" src="env/grafics/yacy.png" alt="YaCy"></span>
+        <span><img id="header-greeting-icon" class="yacylogo" src="env/grafics/UFO-Search-Logo.png" alt="YaCy"></span>
         <span>&nbsp;Administration</span>
       </a>
     </div>
