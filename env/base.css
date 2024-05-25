@@ -1190,11 +1190,11 @@ div#tagcloud {
 
 /* Make the mobile results screen look better */
 @media not (min-width: 768px) {
-  body {
+  #yacysearch {
     padding-top: 140px;
   }
-  
-  .navbar {
+
+  #yacysearch .navbar {
     top: 70px;
   }
 
@@ -1202,7 +1202,7 @@ div#tagcloud {
     top: 151px !important;
   }
 
-  form.search {
+  #yacysearch form.search {
     top: 78px !important;
   }
 
