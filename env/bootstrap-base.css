@@ -130,8 +130,10 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
 .popover {
     z-index: 1600;
 }
-.col-md-9 {
+@media (min-width: 768px) {
+  .col-md-9 {
     overflow-x: hidden;
-	margin-left: 15%;
-	width: 85%;
+    margin-left: 15%;
+    width: 85%;
+  }
 }
