@@ -43,6 +43,35 @@
     });
     </script>
     <style type="text/css">.twitter-typeahead {margin: 0px;padding: 0px;top:3px;}</style> <!-- fix for input window -->
+    <style>
+      .wavy {
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        position: relative;
+        top: 0;
+        display: inline-block;
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .wavy {
+          animation-name: wavy;
+        }
+      }
+      @keyframes wavy {
+        0% {
+          top: 0px;
+        }
+        25% {
+          transform: rotate(-5deg);
+        }
+        50% {
+          top: -10px;
+        }
+        75% {
+          transform: rotate(5deg);
+        }
+      }
+    </style>
   </head>
   <body id="index" onload="#(focus)#::document.getElementById('search').focus()#(/focus)#">
     #(topmenu)#
@@ -58,7 +87,7 @@
 	<script>document.getElementById("greeting-icon").src="env/grafics/invisible.png"</script>
 	
 	<h2 class="yacy"><a href="#[promoteSearchPageGreeting.homepage]#" class="yacylogo"><img src="#[promoteSearchPageGreeting.largeImage]#" alt="#[promoteSearchPageGreeting.imageAlt]#" style="margin: auto; width: 100%;"/></a></h2>
-    <h2 class="yacy">#[promoteSearchPageGreeting]#</h2>
+    <h2 class="yacy" id="ufo-greeting">#[promoteSearchPageGreeting]#</h2>
 
     <form class="search form-inline" action="yacysearch.html" method="get" id="searchform" accept-charset="UTF-8">
       <fieldset class="maininput">
@@ -264,5 +293,25 @@
     ::
     #%env/templates/simplefooter.template%#
     #(/topmenu)#
+    <script>
+      function updateText(text){
+        let greeting = document.getElementById("ufo-greeting");
+        greeting.innerHTML = text
+          .split("")
+          .map(letter => {
+            if (letter == ' ') letter = '&nbsp;';
+            return `<span>${letter}</span>`;
+          })
+          .join("");
+
+        Array.from(greeting.children).forEach((span, index) => {
+          setTimeout(() => {
+            span.classList.add("wavy");
+          }, index * 60);
+        });
+      }
+
+      updateText("Because They're Out There!")
+    </script>
   </body>
 </html>
