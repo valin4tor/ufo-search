@@ -1199,7 +1199,7 @@ div#tagcloud {
   }
 
   #api {
-    top: 151px !important;
+    display: none;
   }
 
   #yacysearch form.search {
