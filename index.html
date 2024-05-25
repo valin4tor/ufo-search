@@ -294,7 +294,7 @@
     #%env/templates/simplefooter.template%#
     #(/topmenu)#
     <script>
-      function updateText(text){
+      function animateGreeting(text){
         let greeting = document.getElementById("ufo-greeting");
         greeting.innerHTML = text
           .split("")
@@ -311,7 +311,14 @@
         });
       }
 
-      updateText("Because They're Out There!")
+      const greetings = [
+        "Because They're Out There!",
+        "Make the Web Fun Again!",
+      ];
+      Array.prototype.random = function() {
+        return this[Math.floor((Math.random()*this.length))];
+      };
+      animateGreeting(greetings.random());
     </script>
   </body>
 </html>
