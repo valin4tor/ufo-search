@@ -1187,3 +1187,39 @@ div#tagcloud {
 
 
 /************* header.template end ************/
+
+/* Make the mobile results screen look better */
+@media not (min-width: 768px) {
+  body {
+    padding-top: 140px;
+  }
+  
+  .navbar {
+    top: 70px;
+  }
+
+  #api {
+    top: 151px !important;
+  }
+
+  form.search {
+    top: 78px !important;
+  }
+
+  #mobile-logo {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    z-index: 1;
+  }
+
+  #mobile-logo img {
+    max-width: 200px;
+    margin: 13px auto;
+  }
+}
+
