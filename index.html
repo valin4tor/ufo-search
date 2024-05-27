@@ -287,6 +287,7 @@
     </form>
     <p class="yacy">
       &copy; 2024 <a href="https://www.unidentified.systems/" target="_blank">Unidentified Systems</a> |
+      <a href="https://github.com/valin4tor/ufo-search" target="_blank">Source Code</a> |
       Powered by <a href="https://yacy.net/" target="_blank">YaCy</a>
     </p>
     <p class="yacy">
@@ -303,8 +304,7 @@
     <script>
       function animateGreeting(text){
         let greeting = document.getElementById("ufo-greeting");
-        greeting.innerHTML = text
-          .split("")
+        greeting.innerHTML = [...text]
           .map(letter => {
             if (letter == ' ') letter = '&nbsp;';
             return `<span>${letter}</span>`;
@@ -319,8 +319,11 @@
       }
 
       const greetings = [
-        "Because They're Out There!",
         "Make the Web Fun Again!",
+        "Сделайте Интернет снова веселым!",
+        "Because They're Out There!",
+        "Let Me SpaceGoogol That For You!",
+        "Powered by Ampere® Altra® 🦾"
       ];
       Array.prototype.random = function() {
         return this[Math.floor((Math.random()*this.length))];
